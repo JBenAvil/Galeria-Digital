@@ -1,0 +1,144 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+.img-galeria{
+  text-align: center;
+}
+img {
+  height: 50%;
+  width: 50%;
+}
+.card-body {
+  text-align: center;
+}
+.card-text-decripcion {
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.img_central {
+  width: 100%;
+  height: 100%;
+}
+
+.Heading-central {
+  text-align: center;
+}
+.col-md-3 {
+  text-align: center;
+}
+
+.card mb-3 box-shadow {
+  text-align: center;
+}
+
+.img_center {
+   text-align: center;
+}
+
+.card-img {
+  text-align: center;
+}
+
+.shell_card {
+  text-align: center;
+}
+
+.img_vtr_central{
+  width: 10%;
+  height: 10%;
+}
+.titulo_tarjet_vtr {
+  text-align: center;
+}
+
+.video_shell_card_1 {
+  text-align: center;
+}
+
+.img_shell_card_header {
+  width: 100%;
+  height: 100%;
+}
+
+.contactanos_shell {
+  text-align: center;
+}
+
+
+.lista_shell {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.img_pies_shell_card img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  text-align: center;
+}
+
+.footer-link img {
+  block-size: 32px;
+  inline-size: 32px;
+}
+
+
+.fondo img {
+  width: 50%;
+  height:50%;
+}
+
+.fond_galeria_digital img {
+  text-align: center;
+  width: 30%;
+  height:30%;
+}
+
+.red {
+  display: initial;
+}
+
+.img {
+  height: 50px;
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.btns {
+text-align: center;
+}
+
+.btn-group {
+  margin-bottom:20px;
+}
+
+.btn-success {
+  width: 150px;
+  box-sizing: border-box;
+}
+
+.btn-warning {
+  width: 150px;
+  box-sizing: border-box;
+
+}
+
+.pie_accesos {
+  color: white;
+}
+
+.pie_center {
+  text-align: center;
+}
+
+
