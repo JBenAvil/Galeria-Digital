@@ -2,6 +2,16 @@ html {
   height: 100%;
   width: 100%;
 }
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#section3 {
+  height: 100%;
+  width: 100%; 
+}
 .img-galeria{
   text-align: center;
 }
