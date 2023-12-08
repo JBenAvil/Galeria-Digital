@@ -146,6 +146,15 @@ img {
   text-align: center;
 }
 
+.btn-bd-primary {
+  background-color: violet;
+  color: white;
+  text-align: center;
+  width: 150px;
+  box-sizing: border-box;
+  
+}
+
 .footer-index {
   width: 100%;
   height: 100%;
