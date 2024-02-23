@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="/style.css" rel="stylesheet" type="text/css"/>
+  <!-- icono barra de navegación internet -->
+  <link rel="icon" href="/static/icon/icon_galería.png">
+  <!-- titulo barra de navegación internet -->
+  <title>Galeria Digital</title>
+  <!-- link icon de google -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- link boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- script boostrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- script proyecto -->
+  <script src="script.js"></script>
+  <!-- script recaptcha apii de Google -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+  <!-- Script para Google analitycs -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV909YDDBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WV909YDDBB');
+  </script>
+  <header>
+    <!-- barra de navegación -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">
+          <img style="height: 30px; width: 30px;" src="/static/icon/icon_galería.png"> Galería Digital</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="galeriaDigital.html">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"> 
+              <img style="height: 30px; width: 30px;" src="/static/icon/icon_galería.png"> 
+              Galería Digital</h5></a>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/nuestrosServicios.html">Nuestros Sevicios</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorías
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="/departamentos.html">
+                    <span class="material-symbols-outlined">
+                     apartment
+                    </span> Departamentos</a></li>
+                  <li><a class="dropdown-item" href="/casas.html">
+                    <span class="material-symbols-outlined">
+                    home
+                    </span> Casas</a></li>
+                  <li><a class="dropdown-item" href="/casasPrefabricadas.html">
+                    <span class="material-symbols-outlined">
+                    home_app_logo
+                    </span> Casas Prefabricadas</a></li>
+                  <li><a class="dropdown-item" href="/hospedaje.html">
+                    <span class="material-symbols-outlined">
+                    night_shelter
+                    </span> Hospedaje</a></li>
+                  <li><a class="dropdown-item" href="/oficinas.html">
+                    <span class="material-symbols-outlined">
+                    location_home
+                    </span> Oficinas</a></li>
+                  <li><a class="dropdown-item" href="/terrenos.html">
+                    <span class="material-symbols-outlined">
+                    home_pin
+                    </span> Terrenos</a></li>
+                  <li><a class="dropdown-item" href="/bodegas.html">
+                    <span class="material-symbols-outlined">
+                    deployed_code_alert
+                    </span> Bodegas</a></li>
+                  <li><a class="dropdown-item" href="/vehiculos.html">
+                    <span class="material-symbols-outlined">
+                    airport_shuttle
+                    </span> Vehículos</a></li>
+                  <li><a class="dropdown-item" href="/servicios.html">
+                    <span class="material-symbols-outlined">
+                    person_search
+                    </span> Servicios</a></li>
+                </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- body -->
+<body>
+  <br>
+  <br>
+  <br>
+<br>
+<h1 style="color: #0FB0F6;" class="card-body">AGENDA UNA REUNIÓN CON NOSOTROS</h1>
+  <br>
+
+  <?php
+    if($_POST["message"]) {
+
+    mail("biocenter.contactanosa@email.address", "Here is the subject line",
+
+    $_POST["insert your message here"]. "From: biocenter.contactanos@email.address");
+  }
+  ?>
+
+  <div class="form-contac">
+    <form method="post" action="mailto:biocenter.contactanos@gmail.com">
+      <label for="nombre"><b>Nombre:</b></label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="apellido"><b>Apellido:</b></label>
+      <input type="text" id="apellido" name="apellido" required><br><br>
+
+      <label for="email"><b>Email:</b></label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="telefono"><b>Teléfono:</b></label>
+      <input type="tel" id="telefono" name="telefono" required><br><br>
+
+        <label for="edificio"><b>Elije tu Bodega:</b></label>
+            <select id="edificio" name="edificio">
+                <option value="Bodega 130, Santiago">Bodega 130, Santiago</option>
+                <option value="Bodega 132, Santiago">Bodega 132, Santiago</option>
+                <option value="Bodega 134, Santiago">Bodega 134, Santiago</option>
+                <option value="Bodega 306, Santiago">Bodega 306, Santiago</option>
+                <option value="Bodega 309, Santiago">Bodega 309, Santiago</option>
+                <option value="Bodega 312, Las Condes">Bodega 312, Las Condes</option>
+                <option value="Bodega 512, Santiago">Bodega 512, Santiago</option>
+                <option value="Bodega 514, Santiago">Bodega 514, Santiago</option>
+                <option value="Bodega 708, Las Condes">Bodega 708, Las Condes</option>
+                <option value="Bodega 740, Las Condes">Bodega 740, Las Condes</option>
+                <option value="Bodega 745, Las Condes">Bodega 745, Las Condes</option>
+                <option value="Bodega 977, Arica">Bodega 977, Arica</option>
+                <option value="Bodega 1001, Maipú">Bodega 1001, Maipú</option>
+                <option value="Bodega 1001, Rancagua">Bodega 1001, Rancagua</option>
+                <option value="Bodega 1002, Rancagua">Bodega 1002, Rancagua</option>
+                <option value="Bodega 1003, Las Condes">Bodega 1003, Las Condes</option>
+                <option value="Bodega 1004, Santiago">Bodega 1004, Santiago</option>
+                <option value="Bodega 1005, Rancagua">Bodega 1005, Rancagua</option>
+                <option value="Bodega 1007, Las Condes">Bodega 1007, Las Condes</option>
+                <option value="Bodega 1008, Rancagua">Bodega 1008, Rancagua</option>
+                <option value="Bodega 1051, Pudahuel">Bodega 1051, Pudahuel</option>
+                <option value="Bodega 1062, Peñalolen">Bodega 1062, Peñalolen</option>              
+                <option value="Bodega 2001, Peñalolen">Bodega 2001, Peñalolen</option>
+                <option value="Bodega 2004, La Florida">Bodega 2004, La Florida</option>
+                <option value="Bodega 2005, La Florida">Bodega 2005, La Florida</option>
+                <option value="Bodega 2007, La Florida">Bodega 2007, La Florida</option>
+                <option value="Bodega 2010, La Florida">Bodega 2010, La Florida</option>
+                <option value="Bodega 2011, La Florida">Bodega 2011, La Florida</option>
+                <option value="Bodega 2063, Peñalolen">Bodega 2063, Peñalolen</option>
+                <option value="Bodega 2065, Pudahuel">Bodega 2065, Pudahuel</option>
+                <option value="Bodega 3002, Ñuñoa">Bodega 3002, Ñuñoa</option>
+                <option value="Bodega 3004, Ñuñoa">Bodega 3004, Ñuñoa</option>
+                <option value="Bodega 3008, Ñuñoa">Bodega 3008, Ñuñoa</option>
+                <option value="Bodega 3025, Peñalolen">Bodega 3025, Peñalolen</option>
+                <option value="Bodega 3031, Santiago">Bodega 3031, Santiago</option>
+                <option value="Bodega 3034, Santiago 1">Bodega 3034, Santiago 1</option>
+                <option value="Bodega 3034, Santiago 2">Bodega 3034, Santiago 2</option>
+                <option value="Bodega 3035, Santiago">Bodega 3035, Santiago</option>
+                <option value="Bodega 3037, Santiago">Bodega 3037, Santiago</option>
+                <option value="Bodego 3039, Santiago</">Bodego 3039, Santiago</option>
+                <option value="Bodega 3044, Las Condes">Bodega 3044, Las Condes</option>
+                <option value="Bodega 3044, Santiago">Bodega 3044, Santiago</option>
+                <option value="Bodega 3050, Conchalí">Bodega 3050, Conchalí</option>
+                <option value="Bodega 3058, Conchalí">Bodega 3058, Conchalí</option>
+                <option value="Bodega 3071, Conchalí">Bodega 3071, Conchalí</option>
+                <option value="Bodega 3072, Santiago">Bodega 3072, Santiago</option>
+                <option value="Bodega 3142, Ñuñoa">Bodega 3142, Ñuñoa</option>
+                <option value="Bodega 3202, Pudahuel">Bodega 3202, Pudahuel</option>
+                <option value="Bodega 4001, Independencia">Bodega 4001, Independencia</option>
+                <option value="Bodega 4002, Independencia">Bodega 4002, Independencia</option>
+                <option value="Bodega 4003, Independencia">Bodega 4003, Independencia</option>
+                <option value="Bodega 4004, Independencia">Bodega 4004, Independencia</option>
+                <option value="Bodega 4005, Independencia">Bodega 4005, Independencia</option>
+                <option value="Bodega 4008, Independencia">Bodega 4008, Independencia</option>
+                <option value="Bodega 4030, Vitacura">Bodega 4030, Vitacura</option>
+                <option value="Bodega 4046, Vitacura">Bodega 4046, Vitacura</option>
+                <option value="Bodega 4047, Las Condes">Bodega 4047, Las Condes</option>
+                <option value="Bodega 4091, Conchalí">Bodega 4091, Conchalí</option>
+                <option value="Bodega 4108, Conchalí">Bodega 4108, Conchalí</option>
+                <option value="Bodega 4123, Pudahuel">Bodega 4123, Pudahuel</option>
+                <option value="Bodega 4152, Pudahuel">Bodega 4152, Pudahuel</option>
+                <option value="Bodega 4152, Vitacura">Bodega 4152, Vitacura</option>
+                <option value="Bodega 5104, Santiago">Bodega 5104, Santiago</option>
+                <option value="Bodega 8004, Santiago">Bodega 8004, Santiago</option>
+                <option value="Bodega 8005, Santiago">Bodega 8005, Santiago</option>
+                <option value="Bodega 8006, Santiago">Bodega 8006, Santiago</option>
+                <option value="Bodega 8007, Santiago">Bodega 8007, Santiago</option>
+                <option value="Bodega 8008, Santiago">Bodega 8008, Santiago</option>
+                <option value="Estación Pickup, Las Condes 1">Estación Pickup, Las Condes 1</option>
+                <option value="Estación Pickup, Las Condes 2<">Estación Pickup, Las Condes 2</option>
+                <option value="Estación Pickup, Las Condes 3">Estación Pickup, Las Condes 3</option>
+                <option value="Estación Pickup, Las Condes 4">Estación Pickup, Las Condes 4</option>
+                <option value="Estación Pickup, Ñuñoa 1">Estación Pickup, Ñuñoa 1</option>
+                <option value="Estación Pickup, Ñuñoa 2">Estación Pickup, Ñuñoa 2</option>
+                <option value="Estación Pickup, Independencia">Estación Pickup, Independencia</option>
+                <option value="Estación Pickup, Pudahuel">Estación Pickup, Pudahuel</option>
+                <option value="Estación Pickup, La Reina">Estación Pickup, La Reina</option>
+                <!-- Podemos elegir Edificios, Proyecto, Inmobiliarias, etc.según la necesidad del momento -->
+            </select>
+          <br>
+          <br>
+          <section class="btn-enviar">
+          <div class="g-recaptcha" data-sitekey="6LfXR3IpAAAAABB_5LolXp_C_xKrw90JHapKmj_q"></div>
+          <br>
+          <input type="submit" value="Enviar">
+          </section>
+      </form>
+      </div>
+
+<br>
+<br>
+<br>
+</body>
+<!-- sección de pie de página -->
+<footer class="footer">
+<div class="fond_galeria_digital">
+  <img src="/static/img/galería.png">
+</div>
+<br>
+<br>
+<section class="contactos">
+<div>
+    <div class="red">
+  <a href="https://www.instagram.com/galeria_digital_red/">
+  <img class="img" title="ir a Instagram" src="/static/icon/instagram.png" alt="..."></a>
+      <div class="red">
+  <a href="https://www.facebook.com/profile.php?id=61552780670164">
+  <img class="img" title="ir a Facebook" src="/static/icon/facebook.png" alt="..."></a>
+        <div class="red">
+  <a href="https://wa.me/56921951687">
+  <img class="img" title="ir a Whattsapp" src="/static/icon/wts.png" alt="..."></a>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+<br> 
+<div class="pie_accesos">
+  <p class="pie_center">© Copyright 2020</p>
+</div>
+<section>
+<div class="cook-pp">
+  <a class="pie_right" href="politicas_de_privacidad.html">Políticas de Privacidad y uso de cookies</a>
+</div>
+</section>
+</footer>
+</html>

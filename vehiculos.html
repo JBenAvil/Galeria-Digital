@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <!-- icono barra de navegación internet -->
+  <link rel="icon" href="static/icon/icon_galería.png">
+  <!-- titulo barra de navegación internet -->
+  <title>Galeria Digital</title>
+  <!-- link icon de google -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- link boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- script boostrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- script proyecto -->
+  <script src="script.js"></script>
+  <!-- script recaptcha apii de Google -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+  <!-- Script para Google analitycs -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV909YDDBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WV909YDDBB');
+  </script>
+  <header>
+    <!-- barra de navegación -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img style="height: 30px; width: 30px;" src="static/icon/icon_galería.png"> Galería Digital</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="galeriaDigital.html">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"> 
+              <img style="height: 30px; width: 30px;" src="static/icon/icon_galería.png"> 
+              Galería Digital</h5></a>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nuestrosServicios.html">Nuestros Sevicios</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorías
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="departamentos.html">
+                    <span class="material-symbols-outlined">
+                     apartment
+                    </span> Departamentos</a></li>
+                  <li><a class="dropdown-item" href="casas.html">
+                    <span class="material-symbols-outlined">
+                    home
+                    </span> Casas</a></li>
+                  <li><a class="dropdown-item" href="casasPrefabricadas.html">
+                    <span class="material-symbols-outlined">
+                    home_app_logo
+                    </span> Casas Prefabricadas</a></li>
+                  <li><a class="dropdown-item" href="hospedaje.html">
+                    <span class="material-symbols-outlined">
+                    night_shelter
+                    </span> Hospedaje</a></li>
+                  <li><a class="dropdown-item" href="oficinas.html">
+                    <span class="material-symbols-outlined">
+                    location_home
+                    </span> Oficinas</a></li>
+                  <li><a class="dropdown-item" href="terrenos.html">
+                    <span class="material-symbols-outlined">
+                    home_pin
+                    </span> Terrenos</a></li>
+                  <li><a class="dropdown-item" href="bodegas.html">
+                    <span class="material-symbols-outlined">
+                    deployed_code_alert
+                    </span> Bodegas</a></li>
+                  <li><a class="dropdown-item" href="vehiculos.html">
+                    <span class="material-symbols-outlined">
+                    airport_shuttle
+                    </span> Vehículos</a></li>
+                  <li><a class="dropdown-item" href="servicios.html">
+                    <span class="material-symbols-outlined">
+                    person_search
+                    </span> Servicios</a></li>
+                </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  <!-- body -->
+<body>
+  <br>
+  <br>
+  <br>
+  <!-- sección vehiculos -->
+  <h1 class="titulo"> Vehiculos Disponibles </h1>
+  <br>
+  <section class="departamentos" id="Departamentos">
+    <!-- B -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707938268152.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">BMW X1 SDRIVE 20I 2.0 AT 2018</p>
+            <p class="card-text"><b>Precio $18.490.000</b></p>
+            <a href="/autos/sgautos_21.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- C -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1708311229548.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN SPACE TOURER XL BLUEHDI 2.0 2022</p>
+            <p class="card-text"><b>Precio $22.890.000</b></p>
+            <a href="/autos/sgautos_28.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707941259127.png" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN C3 AIRCROSS BLUEHDI 1.6 2018</p>
+            <p class="card-text"><b>Precio $12.990.000</b></p>
+            <a href="/autos/sgautos_22.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707771035189.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN BERLINGO XL 1.5 AT 2021</p>
+            <p class="card-text"><b>Precio $14.500.000</b></p>
+            <a href="/autos/sgautos_20.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705443528245.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN BERLINGO XL 1.5 AT 2021</p>
+            <p class="card-text"><b>Precio $14.500.000</b></p>
+            <a href="/autos/sgautos_4.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705444028988.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN C3 HB 1.2 2017</p>
+            <p class="card-text"><b>Precio $8.990.000</b></p>
+            <a href="/autos/sgautos_5.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+      <!-- banner -->
+    <br>
+    <hr/>
+    <section>
+      <div>
+        <img class="point-mini" src="static_vehiculos/banner_seguro_automotriz.jpg">
+      </div>
+      <br>
+      <div class="link-point">
+        <a href="seguros_vehiculos.html" class="btn btn-info">Ver Seguros Disponibles para tu vehículo</a>
+      </div>
+    </section>
+    <hr/>
+    <br>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705444492728.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN C3 SHINE 1.5 HDI 2019</p>
+            <p class="card-text"><b>Precio $9.890.000</b></p>
+            <a href="/autos/sgautos_6.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705446257097.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN C3 AIRCROSS 1.2 AT 2020</p>
+            <p class="card-text"><b>Precio $11.990.000</b></p>
+            <a href="/autos/sgautos_7.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705446633724.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN C4 1.5 AT 2022</p>
+            <p class="card-text"><b>Precio $16.990.000</b></p>
+            <a href="/autos/sgautos_8.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705447540830.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN C4 CACTUS 1.2 2017</p>
+            <p class="card-text"><b>Precio $9.200.000</b></p>
+            <a href="/autos/sgautos_9.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705448192604.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN C5 AIRCROSS AIRCROSS 2.0 AT 2019</p>
+            <p class="card-text"><b>Precio $16.990.000</b></p>
+            <a href="/autos/sgautos_10.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1708118681166.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN C5 AIRCROSS 2.0 BLUEHDI AT8 FEEL 2021</p>
+            <p class="card-text"><b>Precio $17.990.000</b></p>
+            <a href="/autos/sgautos_27.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705448854767.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN JUMPY BLUE HDI 2.0 2022</p>
+            <p class="card-text"><b>Precio $18.990.000</b></p>
+            <a href="/autos/sgautos_11.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+      <!-- banner -->
+    <br>
+    <hr/>
+    <section>
+      <div>
+        <img class="point-mini" src="static_motos/banner_seguro_motos.jpg">
+      </div>
+      <br>
+      <div class="link-point">
+        <a href="seguros_motos.html" class="btn btn-info">Ver Seguros Disponibles para tu Motocicleta</a>
+      </div>
+    </section>
+    <hr/>
+    <br>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706493561357.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROEN C3 MT 2022</p>
+            <p class="card-text"><b>Precio $10.990.000</b></p>
+            <a href="/autos/sgautos_17.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+    <!-- D -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707844923969.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">DS 4 CROSS HDI 1.5 AT 2023</p>
+            <p class="card-text"><b>Precio $31.990.000</b></p>
+            <a href="/autos/sgautos_1.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1689815323626.png" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">DS 3 CROSSBACK E TENSE 2022</p>
+            <p class="card-text"><b>Precio $23.990.000</b></p>
+            <a href="/autos/sgautos_2.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705449399670.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">DS 3 HDI 1.2 AT 2021</p>
+            <p class="card-text"><b>Precio $17.990.000</b></p>
+            <a href="/autos/sgautos_12.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705501968213.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">DS 3 CROSSBACK AT 2022</p>
+            <p class="card-text"><b>Precio $22.990.000</b></p>
+            <a href="/autos/sgautos_13.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705503837281.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">DS 7 CROSSBACK 2.0 AT 2019</p>
+            <p class="card-text"><b>Precio $19.990.000</b></p>
+            <a href="/autos/sgautos_14.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/galery/1866/1708115292821.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">DS 7 CROSSBACK 1.6 AT 2021</p>
+            <p class="card-text"><b>Precio $20.990.000</b></p>
+            <a href="/autos/sgautos_26.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+      <!-- banner -->
+    <br>
+    <hr/>
+    <section>
+      <div>
+        <img class="point-mini" src="static_shell_card/vitrina-SCE.png">
+      </div>
+      <br>
+      <div class="link-point">
+        <a href="shell_card.html" class="btn btn-info">Obten tu Shell Card Aquí</a>
+      </div>
+    </section>
+    <hr/>
+    <br>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707944287488.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">DS 7 AUT 2021</p>
+            <p class="card-text"><b>Precio $24.990.000</b></p>
+            <a href="/autos/sgautos_23.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707945850159.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">DS 7 AT 2021</p>
+            <p class="card-text"><b>Precio $24.990.000</b></p>
+            <a href="/autos/sgautos_24.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707946941846.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">DS 7 CROSSBACK 2.0 AT 2021</p>
+            <p class="card-text"><b>Precio $24.990.000</b></p>
+            <a href="/autos/sgautos_25.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- H -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705505388724.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">HYUNDAI I20 ACTIVE 1.4 2017</p>
+            <p class="card-text"><b>Precio $7.990.000</b></p>
+            <a href="/autos/sgautos_15.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706500514235.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">HYUNDAI VENUE QX 1.6 AUT 2021</p>
+            <p class="card-text"><b>Precio $13.900.000</b></p>
+            <a href="/autos/sgautos_18.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- K -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1705505760617.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">KIA SPORTAGE LX 2.0 2018</p>
+            <p class="card-text"><b>Precio $11.490.000</b></p>
+            <a href="/autos/sgautos_16.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+    <!-- M -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1702926504063.png" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">MAZDA 3 SEDAN 2.0 AT 2015</p>
+            <p class="card-text"><b>Precio $9.990.000</b></p>
+            <a href="/autos/sgautos_3.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+    <!-- P -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706501383390.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>SG AUTOS</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">PEUGEOT 2008 1.2 PURETECH 130 ALLURE PACK 2021</p>
+            <p class="card-text"><b>Precio $13.990.000</b></p>
+            <a href="/autos/sgautos_19.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- AUTOMOTORA LA DEHESA -->
+    <!-- A -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706998703856.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">AUDI Q7 3.0 TDI 2018</p>
+            <p class="card-text"><b>Precio $38.990.000 </b></p>
+            <a href="/autos/ladehesa_12.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706998457755.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">AUDI A7 SPORTBACK 3.0T QUATTRO 2012</p>
+            <p class="card-text"><b>Precio $19.990.000</b></p>
+            <a href="/autos/ladehesa_11.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706998202750.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">AUDI A6 2017</p>
+            <p class="card-text"><b>Precio $22.990.000</b></p>
+            <a href="/autos/ladehesa_10.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706998059595.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">AUDI A4 ALL ROAD 2.0T QUATTRO 2014</p>
+            <p class="card-text"><b>Precio $14.990.000</b></p>
+            <a href="/autos/ladehesa_9.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706997869602.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">AUDI A4 SPORT 2.0 2017</p>
+            <p class="card-text"><b>Precio $30.990.000</b></p>
+            <a href="/autos/ladehesa_8.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706997712562.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">ALFA ROMEO GIULIA VELOCE 2018</p>
+            <p class="card-text"><b>Precio $30.990.000</b></p>
+            <a href="/autos/ladehesa_7.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- B -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707000103988.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">BMW M440I COUPE 2022</p>
+            <p class="card-text"><b>Precio $48.990.000</b></p>
+            <a href="/autos/ladehesa_18.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706999959149.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">BMW 640 3.0 2014</p>
+            <p class="card-text"><b>Precio $23.990.000</b></p>
+            <a href="/autos/ladehesa_17.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706999794952.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">BMW 420 ÚNICO DUEÑO 2023</p>
+            <p class="card-text"><b>Precio $47.990.000</b></p>
+            <a href="/autos/ladehesa_16.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706999677064.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">BMW 323 1981</p>
+            <p class="card-text"><b>Precio $19.990.000</b></p>
+            <a href="/autos/ladehesa_15.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706999536148.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">BMW 240M COUPE 2021</p>
+            <p class="card-text"><b>Precio $36.990.000</b></p>
+            <a href="/autos/ladehesa_14.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706999310749.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">BMW 220 COUPE 2023</p>
+            <p class="card-text"><b>Precio $38.990.000</b></p>
+            <a href="/autos/ladehesa_13.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706997064048.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">BMW 240M COUPE 2021</p>
+            <p class="card-text"><b>Precio $36.990.000</b></p>
+            <a href="/autos/ladehesa_6.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+    <!-- C -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707145256187.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CUPRA ATECA 2021</p>
+            <p class="card-text"><b>Precio $32.990.000</b></p>
+            <a href="/autos/ladehesa_22.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707145131742.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CITROËN C5 AIRCROSS 2021</p>
+            <p class="card-text"><b>Precio $17.990.000</b></p>
+            <a href="/autos/ladehesa_21.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707144713604.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CHEVROLET SILVERADO LT 2020</p>
+            <p class="card-text"><b>Precio $34.990.000</b></p>
+            <a href="/autos/ladehesa_20.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707000259611.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">CHEVROLET COLORADO LT DIESEL 4X4 2022</p>
+            <p class="card-text"><b>Precio $26.990.000</b></p>
+            <a href="/autos/ladehesa_18.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- D -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707145502660.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">DODGE RAM 2011</p>
+            <p class="card-text"><b>Precio $13.990.000</b></p>
+            <a href="/autos/ladehesa_24.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707145387310.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">DODGE CHALLENGER COUPE R/T 5.7 2010</p>
+            <p class="card-text"><b>Precio $18.990.000</b></p>
+            <a href="/autos/ladehesa_23.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- F -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707157899744.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">FORD MUSTANG GT 5.0 COUPE 2019</p>
+            <p class="card-text"><b>Precio $33.990.000</b></p>
+            <a href="/autos/ladehesa_28.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707147873190.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">FORD MUSTANG GT 2021</p>
+            <p class="card-text"><b>Precio $38.990.000</b></p>
+            <a href="/autos/ladehesa_27.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707147729605.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">FORD F-150 2014</p>
+            <p class="card-text"><b>Precio $18.990.000</b></p>
+            <a href="/autos/ladehesa_26.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707145640302.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">FORD F-150 LARIAT LUXURY 5.0 2022</p>
+            <p class="card-text"><b>Precio $43.990.000</b></p>
+            <a href="/autos/ladehesa_25.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- H -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707158086133.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">HONDA PILOT ELITE 4X4 2019</p>
+            <p class="card-text"><b>Precio $24.990.000</b></p>
+            <a href="/autos/ladehesa_29.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707158580701.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">HYUNDAI PORTER GL CRDI 2016</p>
+            <p class="card-text"><b>Precio $9.990.000</b></p>
+            <a href="/autos/ladehesa_31.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707158408639.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">HYUNDAI ACCENT GL 2020</p>
+            <p class="card-text"><b>Precio $9.990.000</b></p>
+            <a href="/autos/ladehesa_30.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- J -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707158983066.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">JEEP WRANGLER UNLIMITED DIESEL 2021</p>
+            <p class="card-text"><b>Precio $52.990.000</b></p>
+            <a href="/autos/ladehesa_33.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707158803302.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">JAC T8 XE 2023</p>
+            <p class="card-text"><b>Precio $15.990.000</b></p>
+            <a href="/autos/ladehesa_32.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706996276735.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">JAC T8 PRO LUXURY 4X4 2023</p>
+            <p class="card-text"><b>Precio $16.990.000</b></p>
+            <a href="/autos/ladehesa_2.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- K -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707159347445.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">KIA SORENTO EX 2020</p>
+            <p class="card-text"><b>Precio $22.990.000</b></p>
+            <a href="/autos/ladehesa_34.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- L -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707163420522.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">LAND ROVER RANGE ROVER EVOQUE 2019</p>
+            <p class="card-text"><b>Precio $36.990.000</b></p>
+            <a href="/autos/ladehesa_35.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707159511526.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">LAND ROVER DISCOVERY 4 DIESEL 3.0 2012</p>
+            <p class="card-text"><b>Precio $17.990.000</b></p>
+            <a href="/autos/ladehesa_1.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- M -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707232129693.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">MERCEDES-BENZ E63 AMG S 4 MATIC+ 2019</p>
+            <p class="card-text"><b>Precio $79.990.000</b></p>
+            <a href="/autos/ladehesa_46.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707231915850.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">MERCEDES-BENZ E300 2017</p>
+            <p class="card-text"><b>Precio $23.990.000</b></p>
+            <a href="/autos/ladehesa_45.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707231776506.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">MERCEDES-BENZ C63 AMG PERFORMANCE PACK 2012</p>
+            <p class="card-text"><b>Precio $38.990.000</b></p>
+            <a href="/autos/ladehesa_44.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- N -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707233038275.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">NISSAN KICKS ADVANCE 1.6 2019</p>
+            <p class="card-text"><b>Precio $8.490.000</b></p>
+            <a href="/autos/ladehesa_48.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707232324335.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">NISSAN KICKS ADVANCE 1.6 2019</p>
+            <p class="card-text"><b>Precio $11.990.000</b></p>
+            <a href="/autos/ladehesa_47.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706996696012.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">NISSAN QASHQAI 2012</p>
+            <p class="card-text"><b>Precio $8.490.000</b></p>
+            <a href="/autos/ladehesa_4.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- P -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707234609789.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">PORSCHE CAYENNE COUPE 3.0 2021</p>
+            <p class="card-text"><b>Precio $75.990.000</b></p>
+            <a href="/autos/ladehesa_53.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707234396714.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">PORSCHE 911 TURBO 2010</p>
+            <p class="card-text"><b>Precio $79.990.000</b></p>
+            <a href="/autos/ladehesa_52.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707234161779.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">PORSCHE 911 CARRERA S COUPE 2013</p>
+            <p class="card-text"><b>Precio $72.990.000</b></p>
+            <a href="/autos/ladehesa_51.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707233806700.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">PEUGEOT TRAVELLER FACTURABLE 2021</p>
+            <p class="card-text"><b>Precio $18.990.000</b></p>
+            <a href="/autos/ladehesa_50.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707233346473.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">PEUGEOT 308 ALLURE 2019</p>
+            <p class="card-text"><b>Precio $12.990.000</b></p>
+            <a href="/autos/ladehesa_49.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- R -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707229063697.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">RENAULT OROCH ZEN 2021</p>
+            <p class="card-text"><b>Precio $9.990.000</b></p>
+            <a href="/autos/ladehesa_38.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- S -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707231133996.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">SKODA SCALA 2023</p>
+            <p class="card-text"><b>Precio $18.990.000</b></p>
+            <a href="/autos/ladehesa_40.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707229200306.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">SKODA OCTAVIA AMBITION 1.4 TSI 2021</p>
+            <p class="card-text"><b>Precio $11.990.000</b></p>
+            <a href="/autos/ladehesa_39.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- T -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707231496061.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">TOYOTA YARIS SPORT S 2021</p>
+            <p class="card-text"><b>Precio $9.990.000</b></p>
+            <a href="/autos/ladehesa_43.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707231374193.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">TOYOTA YARIS GLI 2021</p>
+            <p class="card-text"><b>Precio $8.990.000</b></p>
+            <a href="/autos/ladehesa_42.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707231263821.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">TOYOTA FORTUNER SR5 DIESEL 2022</p>
+            <p class="card-text"><b>Precio $29.990.000</b></p>
+            <a href="/autos/ladehesa_41.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- V -->
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707228556642.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">VOLKSWAGEN TIGUAN 2.0 TSI R LINE 2021</p>
+            <p class="card-text"><b>Precio $36.990.000</b></p>
+            <a href="/autos/ladehesa_36.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1706996908060.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">VOLKSWAGEN GOL 1.6 2021</p>
+            <p class="card-text"><b>Precio $8.990.000</b></p>
+            <a href="/autos/ladehesa_5.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img style="width: 100%; height: 100%;" src="https://api.bnthunter.com/images/products/1707228906810.jpeg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">VOLKSWAGEN GOLF 2016</p>
+            <p class="card-text"><b>Precio $9.990.000</b></p>
+            <a href="/autos/ladehesa_37.html" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+<!--
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><b>AUTOMOTORA LA DEHESA</b></h5>
+            <hr style="background-color: black; height: 10px;">
+            <p class="card-text">PORSCHE CAYENNE COUPE 3.0 2021</p>
+            <p class="card-text"><b>Precio $75.990.000</b></p>
+            <a href="/autos/" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    -->
+
+<br>
+  </section>
+<br>
+<br>
+<br>
+</body>
+<!-- sección de pie de página -->
+<footer class="footer">
+<div class="fond_galeria_digital">
+  <img src="static/img/galería.png">
+</div>
+<br>
+<br>
+<section class="contactos">
+<div>
+    <div class="red">
+  <a href="https://www.instagram.com/galeria_digital_red/">
+  <img class="img" title="ir a Instagram" src="static/icon/instagram.png" alt="..."></a>
+      <div class="red">
+  <a href="https://www.facebook.com/profile.php?id=61552780670164">
+  <img class="img" title="ir a Facebook" src="static/icon/facebook.png" alt="..."></a>
+        <div class="red">
+  <a href="https://wa.me/56921951687">
+  <img class="img" title="ir a Whattsapp" src="static/icon/wts.png" alt="..."></a>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+<br> 
+<div class="pie_accesos">
+  <p class="pie_center">© Copyright 2020</p>
+</div>
+<section>
+<div class="cook-pp">
+  <a class="pie_right" href="politicas_de_privacidad.html">Políticas de Privacidad y uso de cookies</a>
+</div>
+</section>
+</footer>
+</html>

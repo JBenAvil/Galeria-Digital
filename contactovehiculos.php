@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="/style.css" rel="stylesheet" type="text/css"/>
+  <!-- icono barra de navegación internet -->
+  <link rel="icon" href="/static/icon/icon_galería.png">
+  <!-- titulo barra de navegación internet -->
+  <title>Galeria Digital</title>
+  <!-- link icon de google -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- link boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- script boostrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- script proyecto -->
+  <script src="script.js"></script>
+  <!-- script recaptcha apii de Google -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+  <!-- Script para Google analitycs -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV909YDDBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WV909YDDBB');
+  </script>
+  <header>
+    <!-- barra de navegación -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">
+          <img style="height: 30px; width: 30px;" src="/static/icon/icon_galería.png"> Galería Digital</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="galeriaDigital.html">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"> 
+              <img style="height: 30px; width: 30px;" src="/static/icon/icon_galería.png"> 
+              Galería Digital</h5></a>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/nuestrosServicios.html">Nuestros Sevicios</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorías
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="/departamentos.html">
+                    <span class="material-symbols-outlined">
+                     apartment
+                    </span> Departamentos</a></li>
+                  <li><a class="dropdown-item" href="/casas.html">
+                    <span class="material-symbols-outlined">
+                    home
+                    </span> Casas</a></li>
+                  <li><a class="dropdown-item" href="/casasPrefabricadas.html">
+                    <span class="material-symbols-outlined">
+                    home_app_logo
+                    </span> Casas Prefabricadas</a></li>
+                  <li><a class="dropdown-item" href="/hospedaje.html">
+                    <span class="material-symbols-outlined">
+                    night_shelter
+                    </span> Hospedaje</a></li>
+                  <li><a class="dropdown-item" href="/oficinas.html">
+                    <span class="material-symbols-outlined">
+                    location_home
+                    </span> Oficinas</a></li>
+                  <li><a class="dropdown-item" href="/terrenos.html">
+                    <span class="material-symbols-outlined">
+                    home_pin
+                    </span> Terrenos</a></li>
+                  <li><a class="dropdown-item" href="/bodegas.html">
+                    <span class="material-symbols-outlined">
+                    deployed_code_alert
+                    </span> Bodegas</a></li>
+                  <li><a class="dropdown-item" href="/vehiculos.html">
+                    <span class="material-symbols-outlined">
+                    airport_shuttle
+                    </span> Vehículos</a></li>
+                  <li><a class="dropdown-item" href="/servicios.html">
+                    <span class="material-symbols-outlined">
+                    person_search
+                    </span> Servicios</a></li>
+                </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- body -->
+<body>
+  <br>
+  <br>
+  <br>
+<br>
+<h1 style="color: #0FB0F6;" class="card-body">AGENDA UNA REUNIÓN CON NOSOTROS</h1>
+  <br>
+
+  <?php
+    if($_POST["message"]) {
+
+    mail("biocenter.contactanos@email.address", "Here is the subject line",
+
+    $_POST["insert your message here"]. "From: biocenter.contactanos@email.address");
+  }
+  ?>
+
+  <div class="form-contac">
+    <form method="post" action="mailto:biocenter.contactanos@gmail.com">
+      <label for="nombre"><b>Nombre:</b></label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="apellido"><b>Apellido:</b></label>
+      <input type="text" id="apellido" name="apellido" required><br><br>
+
+      <label for="rut"><b>RUT:</b></label>
+      <input type="text" id="rut" name="rut" required><br><br>
+
+      <label for="email"><b>Email:</b></label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="telefono"><b>Teléfono:</b></label>
+      <input type="tel" id="telefono" name="telefono" required><br><br>
+
+      <fieldset>
+          <legend>Método de Pago:</legend>
+          <input type="checkbox" id="credito" name="metodo_financiamiento" value="credito_hipotecario">
+          <label for="credito">Crédito</label><br>
+          <input type="checkbox" id="contado" name="metodo_financiamiento" value="al_contado">
+          <label for="contado">Al Contado</label><br>
+      </fieldset><br>
+        <label for="edificio"><b>Elije tu Vehículo:</b></label>
+            <select id="edificio" name="edificio">
+                <option value="BMW X1 SDRIVE 20I 2.0 AT 2018, SG AUTOS">BMW X1 SDRIVE 20I 2.0 AT 2018, SG AUTOS</option>
+                <option value="CITROEN SPACE TOURER XL BLUEHDI 2.0 2022, SG AUTOS">CITROEN SPACE TOURER XL BLUEHDI 2.0 2022, SG AUTOS</option>
+                <option value="CITROEN C3 AIRCROSS BLUEHDI 1.6 2018, SG AUTOS">CITROEN C3 AIRCROSS BLUEHDI 1.6 2018, SG AUTOS</option>
+                <option value="CITROEN BERLINGO XL 1.5 AT 2021, SG AUTOS">CITROEN BERLINGO XL 1.5 AT 2021, SG AUTOS</option>
+                <option value="CITROEN C3 HB 1.2 2017, SG AUTOS">CITROEN C3 HB 1.2 2017, SG AUTOS</option>
+                <option value="CITROEN BERLINGO XL 1.5 AT 2021, SG AUTOS">CITROEN BERLINGO XL 1.5 AT 2021, SG AUTOS</option>
+                <option value="CITROEN C3 SHINE 1.5 HDI 2019, SG AUTOS">CITROEN C3 SHINE 1.5 HDI 2019, SG AUTOS</option>
+                <option value="CITROEN C3 AIRCROSS 1.2 AT 2020, SG AUTOS">CITROEN C3 AIRCROSS 1.2 AT 2020, SG AUTOS</option>
+                <option value="CITROEN C4 1.5 AT 2022, SG AUTOS">CITROEN C4 1.5 AT 2022, SG AUTOS</option>
+                <option value="CITROEN C4 CACTUS 1.2 2017, SG AUTOS">CITROEN C4 CACTUS 1.2 2017, SG AUTOS</option>
+                <option value="CITROEN C5 AIRCROSS AIRCROSS 2.0 AT 2019, SG AUTOS">CITROEN C5 AIRCROSS AIRCROSS 2.0 AT 2019, SG AUTOS</option>
+                <option value="CITROEN C5 AIRCROSS 2.0 BLUEHDI AT8 FEEL 2021, SG AUTOS">CITROEN C5 AIRCROSS 2.0 BLUEHDI AT8 FEEL 2021, SG AUTOS</option>
+                <option value="CITROEN JUMPY BLUE HDI 2.0 2022, SG AUTOS<">CITROEN JUMPY BLUE HDI 2.0 2022, SG AUTOS</option>
+                <option value="CITROEN C3 MT 2022, SG AUTOS">CITROEN C3 MT 2022, SG AUTOS</option>             
+                <option value="DS 4 CROSS HDI 1.5 AT 2023, SG AUTOS">DS 4 CROSS HDI 1.5 AT 2023, SG AUTOS</option>
+                <option value="DS 3 CROSSBACK E TENSE 2022, SG AUTOS">DS 3 CROSSBACK E TENSE 2022, SG AUTOS</option>           
+                <option value="DS 3 HDI 1.2 AT 2021, SG AUTOS">DS 3 HDI 1.2 AT 2021, SG AUTOS</option>
+                <option value="DS 3 CROSSBACK AT 2022, SG AUTOS">DS 3 CROSSBACK AT 2022, SG AUTOS</option>             
+                <option value="DS 7 CROSSBACK 2.0 AT 2019, SG AUTOS">DS 7 CROSSBACK 2.0 AT 2019, SG AUTOS</option>
+                <option value="DS 7 CROSSBACK 1.6 AT 2021, SG AUTOS">DS 7 CROSSBACK 1.6 AT 2021, SG AUTOS</option>
+                <option value="DS 7 AUT 2021, SG AUTOS">DS 7 AUT 2021, SG AUTOS</option>
+                <option value="DS 7 AT 2021, SG AUTOS</">DS 7 AT 2021, SG AUTOS</option>
+                <option value="DS 7 AT 2021, SG AUTOS">DS 7 AT 2021, SG AUTOS</option>
+                <option value="HYUNDAI I20 ACTIVE 1.4 2017, SG AUTOS">HYUNDAI I20 ACTIVE 1.4 2017, SG AUTOS</option>
+                <option value="HYUNDAI VENUE QX 1.6 AUT 2021, SG AUTOS">HYUNDAI VENUE QX 1.6 AUT 2021, SG AUTOS</option>
+                <option value="KIA SPORTAGE LX 2.0 2018, SG AUTOS">KIA SPORTAGE LX 2.0 2018, SG AUTOS</option>
+                <option value="MAZDA 3 SEDAN 2.0 AT 2015, SG AUTOS">MAZDA 3 SEDAN 2.0 AT 2015, SG AUTOS</option>            
+                <option value="PEUGEOT 2008 1.2 PURETECH 130 ALLURE PACK 2021, SG AUTOS">PEUGEOT 2008 1.2 PURETECH 130 ALLURE PACK 2021, SG AUTOS</option>
+                <option value="AUDI Q7 3.0 TDI 2018, AUTOMOTORA LA DEHESA">AUDI Q7 3.0 TDI 2018, AUTOMOTORA LA DEHESA</option>
+                <option value="AUDI A7 SPORTBACK 3.0T QUATTRO 2012, AUTOMOTORA LA DEHESA">AUDI A7 SPORTBACK 3.0T QUATTRO 2012, AUTOMOTORA LA DEHESA</option>
+                <option value="AUDI A6 2017, AUTOMOTORA LA DEHESA">AUDI A6 2017, AUTOMOTORA LA DEHESA</option>
+                <option value="AUDI A4 ALL ROAD 2.0T QUATTRO 2014, AUTOMOTORA LA DEHESA">AUDI A4 ALL ROAD 2.0T QUATTRO 2014, AUTOMOTORA LA DEHESA</option>
+                <option value="AUDI A4 SPORT 2.0 2017, AUTOMOTORA LA DEHESA">AUDI A4 SPORT 2.0 2017, AUTOMOTORA LA DEHESA</option>
+                <option value="ALFA ROMEO GIULIA VELOCE 2018, AUTOMOTORA LA DEHESA">ALFA ROMEO GIULIA VELOCE 2018, AUTOMOTORA LA DEHESA</option>
+                <option value="BMW M440I COUPE 2022, AUTOMOTORA LA DEHESA<">BMW M440I COUPE 2022, AUTOMOTORA LA DEHESA</option>
+                <option value="BMW 640 3.0 2014, AUTOMOTORA LA DEHESA">BMW 640 3.0 2014, AUTOMOTORA LA DEHESA</option>
+                <option value="BMW 420 ÚNICO DUEÑO 2023, AUTOMOTORA LA DEHESA">BMW 420 ÚNICO DUEÑO 2023, AUTOMOTORA LA DEHESA</option>
+                <option value="BMW 323 1981, AUTOMOTORA LA DEHESA">BMW 323 1981, AUTOMOTORA LA DEHESA</option>
+                <option value="BMW 240M COUPE 2021, AUTOMOTORA LA DEHESA">BMW 240M COUPE 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="BMW 220 COUPE 2023, AUTOMOTORA LA DEHESA">BMW 220 COUPE 2023, AUTOMOTORA LA DEHESA</option>
+                <option value="BMW 240M COUPE 2021, AUTOMOTORA LA DEHESA">BMW 240M COUPE 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="CUPRA ATECA 2021, AUTOMOTORA LA DEHESA">CUPRA ATECA 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="CITROEN C5 AIRCROSS 2021, AUTOMOTORA LA DEHESA">CITROEN C5 AIRCROSS 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="CHEVROLET SILVERADO LT 2020, AUTOMOTORA LA DEHESA">CHEVROLET SILVERADO LT 2020, AUTOMOTORA LA DEHESA</option>
+                <option value="CHEVROLET COLORADO LT DIESEL 4X4 2022, AUTOMOTORA LA DEHESA">CHEVROLET COLORADO LT DIESEL 4X4 2022, AUTOMOTORA LA DEHESA</option>
+                <option value="DODGE RAM 2011, AUTOMOTORA LA DEHESA">DODGE RAM 2011, AUTOMOTORA LA DEHESA</option>
+                <option value="DODGE CHALLENGER COUPE R/T 5.7 2010, AUTOMOTORA LA DEHESA">DODGE CHALLENGER COUPE R/T 5.7 2010, AUTOMOTORA LA DEHESA</option>
+                <option value="FORD MUSTANG GT 5.0 COUPE 2019, AUTOMOTORA LA DEHESA">FORD MUSTANG GT 5.0 COUPE 2019, AUTOMOTORA LA DEHESA</option>
+                <option value="FORD MUSTANG GT 2021, AUTOMOTORA LA DEHESA">FORD MUSTANG GT 2021, AUTOMOTORA LA DEHESA</option> 
+                <option value="FORD F-150 2014, AUTOMOTORA LA DEHESA">FORD F-150 2014, AUTOMOTORA LA DEHESA</option>
+                <option value="FORD F-150 LARIAT LUXURY 5.0 2022, AUTOMOTORA LA DEHESA">FORD F-150 LARIAT LUXURY 5.0 2022, AUTOMOTORA LA DEHESA</option>
+                <option value="HONDA PILOT ELITE 4X4 2019, AUTOMOTORA LA DEHESA">HONDA PILOT ELITE 4X4 2019, AUTOMOTORA LA DEHESA</option>
+                <option value="HYUNDAI PORTER GL CRDI 2016, AUTOMOTORA LA DEHESA">HYUNDAI PORTER GL CRDI 2016, AUTOMOTORA LA DEHESA</option>
+                <option value="HYUNDAI ACCENT GL 2020, AUTOMOTORA LA DEHESA">HYUNDAI ACCENT GL 2020, AUTOMOTORA LA DEHESA</option>
+                <option value="JEEP WRANGLER UNLIMITED DIESEL 2021, AUTOMOTORA LA DEHESA">JEEP WRANGLER UNLIMITED DIESEL 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="JAC T8 XE 2023, AUTOMOTORA LA DEHESA">JAC T8 XE 2023, AUTOMOTORA LA DEHESA</option>
+                <option value="JAC T8 PRO LUXURY 4X4 2023, AUTOMOTORA LA DEHESA">JAC T8 PRO LUXURY 4X4 2023, AUTOMOTORA LA DEHESA</option>
+                <option value="KIA SORENTO EX 2020, AUTOMOTORA LA DEHESA">KIA SORENTO EX 2020, AUTOMOTORA LA DEHESA</option>
+                <option value="LAND ROVER RANGE ROVER EVOQUE 2019, AUTOMOTORA LA DEHESA">LAND ROVER RANGE ROVER EVOQUE 2019, AUTOMOTORA LA DEHESA</option>
+                <option value="LAND ROVER DISCOVERY 4 DIESEL 3.0 2012, AUTOMOTORA LA DEHESA">LAND ROVER DISCOVERY 4 DIESEL 3.0 2012, AUTOMOTORA LA DEHESA</option>  
+                <option value="MERCEDES-BENZ E63 AMG S 4 MATIC+ 2019, AUTOMOTORA LA DEHESA">MERCEDES-BENZ E63 AMG S 4 MATIC+ 2019, AUTOMOTORA LA DEHESA</option>
+                <option value="MERCEDES-BENZ E300 2017, AUTOMOTORA LA DEHESA">MERCEDES-BENZ E300 2017, AUTOMOTORA LA DEHESA</option>
+                <option value="MERCEDES-BENZ C63 AMG PERFORMANCE PACK 2012, AUTOMOTORA LA DEHESA">MERCEDES-BENZ C63 AMG PERFORMANCE PACK 2012, AUTOMOTORA LA DEHESA</option>
+                <option value="NISSAN QASHQAI 2012, AUTOMOTORA LA DEHESA">NISSAN QASHQAI 2012, AUTOMOTORA LA DEHESA</option>
+                <option value="NISSAN KICKS ADVANCE 1.6 2019, AUTOMOTORA LA DEHESA">NISSAN KICKS ADVANCE 1.6 2019, AUTOMOTORA LA DEHESA</option>
+                <option value="NISSAN QASHQAI 2012, AUTOMOTORA LA DEHESA">NISSAN QASHQAI 2012, AUTOMOTORA LA DEHESA</option>
+                <option value="PORSCHE CAYENNE COUPE 3.0 2021, AUTOMOTORA LA DEHESA">PORSCHE CAYENNE COUPE 3.0 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="PORSCHE 911 TURBO 2010, AUTOMOTORA LA DEHESA">PORSCHE 911 TURBO 2010, AUTOMOTORA LA DEHESA</option>
+                <option value="PORSCHE 911 CARRERA S COUPE 2013, AUTOMOTORA LA DEHESA">PORSCHE 911 CARRERA S COUPE 2013, AUTOMOTORA LA DEHESA</option>
+                <option value="PEUGEOT TRAVELLER FACTURABLE 2021, AUTOMOTORA LA DEHESA">PEUGEOT TRAVELLER FACTURABLE 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="PEUGEOT 308 ALLURE 2019, AUTOMOTORA LA DEHESA">PEUGEOT 308 ALLURE 2019, AUTOMOTORA LA DEHESA</option>
+                <option value="RENAULT OROCH ZEN 2021, AUTOMOTORA LA DEHESA">RENAULT OROCH ZEN 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="SKODA SCALA 2023, AUTOMOTORA LA DEHESA">SKODA SCALA 2023, AUTOMOTORA LA DEHESA</option>
+                <option value="SKODA OCTAVIA AMBITION 1.4 TSI 2021, AUTOMOTORA LA DEHESA">SKODA OCTAVIA AMBITION 1.4 TSI 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="TOYOTA YARIS SPORT S 2021, AUTOMOTORA LA DEHESA">TOYOTA YARIS SPORT S 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="TOYOTA YARIS GLI 2021, AUTOMOTORA LA DEHESA">TOYOTA YARIS GLI 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="TOYOTA FORTUNER SR5 DIESEL 2022, AUTOMOTORA LA DEHESA">TOYOTA FORTUNER SR5 DIESEL 2022, AUTOMOTORA LA DEHESA</option>
+                <option value="VOLKSWAGEN TIGUAN 2.0 TSI R LINE 2021, AUTOMOTORA LA DEHESA">VOLKSWAGEN TIGUAN 2.0 TSI R LINE 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="VOLKSWAGEN GOL 1.6 2021, AUTOMOTORA LA DEHESA">VOLKSWAGEN GOL 1.6 2021, AUTOMOTORA LA DEHESA</option>
+                <option value="VOLKSWAGEN GOLF 2016, AUTOMOTORA LA DEHESA">VOLKSWAGEN GOLF 2016, AUTOMOTORA LA DEHESA</option>
+                
+              
+                <!-- Podemos elegir Edificios, Proyecto, Inmobiliarias, etc.según la necesidad del momento -->
+            </select>
+          <br>
+          <br>
+          <section class="btn-enviar">
+          <div class="g-recaptcha" data-sitekey="6LfXR3IpAAAAABB_5LolXp_C_xKrw90JHapKmj_q"></div>
+          <br>
+          <input type="submit" value="Enviar">
+          </section>
+      </form>
+      </div>
+
+<br>
+<br>
+<br>
+</body>
+<!-- sección de pie de página -->
+<footer class="footer">
+<div class="fond_galeria_digital">
+  <img src="/static/img/galería.png">
+</div>
+<br>
+<br>
+<section class="contactos">
+<div>
+    <div class="red">
+  <a href="https://www.instagram.com/galeria_digital_red/">
+  <img class="img" title="ir a Instagram" src="/static/icon/instagram.png" alt="..."></a>
+      <div class="red">
+  <a href="https://www.facebook.com/profile.php?id=61552780670164">
+  <img class="img" title="ir a Facebook" src="/static/icon/facebook.png" alt="..."></a>
+        <div class="red">
+  <a href="https://wa.me/56921951687">
+  <img class="img" title="ir a Whattsapp" src="/static/icon/wts.png" alt="..."></a>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+<br> 
+<div class="pie_accesos">
+  <p class="pie_center">© Copyright 2020</p>
+</div>
+<section>
+<div class="cook-pp">
+  <a class="pie_right" href="politicas_de_privacidad.html">Políticas de Privacidad y uso de cookies</a>
+</div>
+</section>
+</footer>
+</html>
