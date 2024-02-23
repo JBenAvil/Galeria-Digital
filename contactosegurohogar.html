@@ -113,15 +113,6 @@
 <h1 style="color: #0FB0F6;" class="card-body">AGENDA UNA REUNIÓN CON NOSOTROS</h1>
   <br>
 
-  <?php
-    if($_POST["message"]) {
-
-    mail("biocenter.contactanos@email.address", "Here is the subject line",
-
-    $_POST["insert your message here"]. "From: biocenter.contactanos@email.address");
-  }
-  ?>
-
   <div class="form-contac">
     <form method="post" action="mailto:biocenter.contactanos@gmail.com">
       <label for="nombre"><b>Nombre:</b></label>
@@ -138,19 +129,12 @@
 
       <label for="telefono"><b>Teléfono:</b></label>
       <input type="tel" id="telefono" name="telefono" required><br><br>
-
-      <label for="apellido"><b>Dirección:</b></label>
-      <input type="text" id="dirección" name="dirección" required><br><br>
-
-        <label for="edificio"><b>Elije tu el Seguro de tu Interés:</b></label>
+      
+        <label for="edificio"><b>Elije el Seguro par tu Hogar:</b></label>
             <select id="edificio" name="edificio">
-                <option value="Seguro para supermercados y minimarket">Seguro para supermercados y minimarket</option>
-                <option value="Seguro de viajes">Seguro de viajes</option>
-                <option value="Seguro para oficinas">Seguro para oficinas</option>
-                <option value="Seguro para Veterinarias y Petshop">Seguro para Veterinarias y Petshop</option>
-                <option value="Seguro para peluquerías y centros de estética">Seguro para peluquerías y centros de estética</option>
-                <option value="Seguro Restaurantes y Cafeterías">Seguro Restaurantes y Cafeterías</option>
-                
+                <option value="Seguro Contenido Hogar">Seguro Contenido Hogar</option>
+                <option value="Seguro Contenido y Exteriror">Seguro Contenido y Exteriror</option>
+                <option value="Seguro Incendio Hipotecario">Seguro Incendio Hipotecario</option>
                 <!-- Podemos elegir Edificios, Proyecto, Inmobiliarias, etc.según la necesidad del momento -->
             </select>
           <br>

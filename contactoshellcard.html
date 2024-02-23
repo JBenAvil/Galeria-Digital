@@ -113,15 +113,6 @@
 <h1 style="color: #0FB0F6;" class="card-body">AGENDA UNA REUNIÓN CON NOSOTROS</h1>
   <br>
 
-  <?php
-    if($_POST["message"]) {
-
-    mail("biocenter.contactanos@email.address", "Here is the subject line",
-
-    $_POST["insert your message here"]. "From: biocenter.contactanos@email.address");
-  }
-  ?>
-
   <div class="form-contac">
     <form method="post" action="mailto:biocenter.contactanos@gmail.com">
       <label for="nombre"><b>Nombre:</b></label>
@@ -130,7 +121,7 @@
       <label for="apellido"><b>Apellido:</b></label>
       <input type="text" id="apellido" name="apellido" required><br><br>
 
-      <label for="rut"><b>RUT:</b></label>
+      <label for="rut"><b>RUT Empresa o Personal Natural:</b></label>
       <input type="text" id="rut" name="rut" required><br><br>
 
       <label for="email"><b>Email:</b></label>
@@ -139,25 +130,9 @@
       <label for="telefono"><b>Teléfono:</b></label>
       <input type="tel" id="telefono" name="telefono" required><br><br>
 
-      <fieldset>
-          <legend>Método de Financiamiento:</legend>
-          <input type="checkbox" id="credito" name="metodo_financiamiento" value="credito_hipotecario">
-          <label for="credito">Crédito Hipotecario</label><br>
-          <input type="checkbox" id="contado" name="metodo_financiamiento" value="al_contado">
-          <label for="contado">Al Contado</label><br>
-      </fieldset><br>
-        <label for="edificio"><b>Elije tu Casa:</b></label>
-            <select id="edificio" name="edificio">
-                <option value="Conquistadores, Puente Alto">Conquistadores, Puente Alto</option>
-                <option value="Townhouse Terralta, Las Condes">Townhouse Terralta, Las Condes</option>
-                <option value="Terralta, Colina">Terralta, Colina</option>
-                <option value="Santuario del Valle, Las Dehesa">Santuario del Valle, Las Dehesa</option>
-                <option value="Las Brisas, Chicureo">Las Brisas, Chicureo</option>
-                <option value="Townhouse Flandes, Las Condes">Townhouse Flandes, Las Condes</option>
-                <option value="Los Nogales, La Dehesa">Los Nogales, La Dehesa</option>
-                <option value="Punta Kai, Punta Sur Playa Pupuya S/N, Matanza">Punta Kai, Punta Sur Playa Pupuya S/N, Matanza</option>
-
-              
+      <label for="edificio"><b>Elije Tu Tarjeta:</b></label>
+      <select id="edificio" name="edificio">
+          <option value="Shell card">Shell Card</option>
                 <!-- Podemos elegir Edificios, Proyecto, Inmobiliarias, etc.según la necesidad del momento -->
             </select>
           <br>

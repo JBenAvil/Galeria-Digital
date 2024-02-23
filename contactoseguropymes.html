@@ -113,15 +113,6 @@
 <h1 style="color: #0FB0F6;" class="card-body">AGENDA UNA REUNIÓN CON NOSOTROS</h1>
   <br>
 
-  <?php
-    if($_POST["message"]) {
-
-    mail("biocenter.contactanos@email.address", "Here is the subject line",
-
-    $_POST["insert your message here"]. "From: biocenter.contactanos@email.address");
-  }
-  ?>
-
   <div class="form-contac">
     <form method="post" action="mailto:biocenter.contactanos@gmail.com">
       <label for="nombre"><b>Nombre:</b></label>
@@ -130,7 +121,7 @@
       <label for="apellido"><b>Apellido:</b></label>
       <input type="text" id="apellido" name="apellido" required><br><br>
 
-      <label for="rut"><b>RUT Empresa o Personal Natural:</b></label>
+      <label for="rut"><b>RUT:</b></label>
       <input type="text" id="rut" name="rut" required><br><br>
 
       <label for="email"><b>Email:</b></label>
@@ -139,9 +130,18 @@
       <label for="telefono"><b>Teléfono:</b></label>
       <input type="tel" id="telefono" name="telefono" required><br><br>
 
-      <label for="edificio"><b>Elije Tu Tarjeta:</b></label>
-      <select id="edificio" name="edificio">
-          <option value="Shell card">Shell Card</option>
+      <label for="apellido"><b>Dirección:</b></label>
+      <input type="text" id="dirección" name="dirección" required><br><br>
+
+        <label for="edificio"><b>Elije tu el Seguro de tu Interés:</b></label>
+            <select id="edificio" name="edificio">
+                <option value="Seguro para supermercados y minimarket">Seguro para supermercados y minimarket</option>
+                <option value="Seguro de viajes">Seguro de viajes</option>
+                <option value="Seguro para oficinas">Seguro para oficinas</option>
+                <option value="Seguro para Veterinarias y Petshop">Seguro para Veterinarias y Petshop</option>
+                <option value="Seguro para peluquerías y centros de estética">Seguro para peluquerías y centros de estética</option>
+                <option value="Seguro Restaurantes y Cafeterías">Seguro Restaurantes y Cafeterías</option>
+                
                 <!-- Podemos elegir Edificios, Proyecto, Inmobiliarias, etc.según la necesidad del momento -->
             </select>
           <br>

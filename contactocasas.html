@@ -113,15 +113,6 @@
 <h1 style="color: #0FB0F6;" class="card-body">AGENDA UNA REUNIÓN CON NOSOTROS</h1>
   <br>
 
-  <?php
-    if($_POST["message"]) {
-
-    mail("biocenter.contactanos@email.address", "Here is the subject line",
-
-    $_POST["insert your message here"]. "From: biocenter.contactanos@email.address");
-  }
-  ?>
-
   <div class="form-contac">
     <form method="post" action="mailto:biocenter.contactanos@gmail.com">
       <label for="nombre"><b>Nombre:</b></label>
@@ -130,28 +121,34 @@
       <label for="apellido"><b>Apellido:</b></label>
       <input type="text" id="apellido" name="apellido" required><br><br>
 
+      <label for="rut"><b>RUT:</b></label>
+      <input type="text" id="rut" name="rut" required><br><br>
+
       <label for="email"><b>Email:</b></label>
       <input type="email" id="email" name="email" required><br><br>
 
       <label for="telefono"><b>Teléfono:</b></label>
       <input type="tel" id="telefono" name="telefono" required><br><br>
 
-        <label for="edificio"><b>Elije tu Terreno:</b></label>
+      <fieldset>
+          <legend>Método de Financiamiento:</legend>
+          <input type="checkbox" id="credito" name="metodo_financiamiento" value="credito_hipotecario">
+          <label for="credito">Crédito Hipotecario</label><br>
+          <input type="checkbox" id="contado" name="metodo_financiamiento" value="al_contado">
+          <label for="contado">Al Contado</label><br>
+      </fieldset><br>
+        <label for="edificio"><b>Elije tu Casa:</b></label>
             <select id="edificio" name="edificio">
-                <option value="Altamar, Lagunilla S/N, Matanza, Latitud Sur">Altamar, Lagunilla S/N, Matanza, Latitud Sur</option>
-                <option value="La Campana, Cerro La Campana S/N, Navidad, Latitud Sur">La Campana, Cerro La Campana S/N, Navidad, Latitud Sur</option>
-                <option value="Palo Negro, Pupuya Alto S/N, Navidad, Latitud Sur">Palo Negro, Pupuya Alto S/N, Navidad, Latitud Sur</option>
-                <option value="Propiedad Agroindustrial, San Ignacio">Propiedad Agroindustrial, San Ignacio</option>
-                <option value="Terreno Agrícola, San Ignacio">Terreno Agrícola, San Ignacio</option>
-                <option value="Campo de 320 hectáreas, Aguas de Río Nevado">Campo de 320 hectáreas, Aguas de Río Nevado</option>
-                <option value="Terreno 1.286 m2, Florida USA">Terreno 1.286 m2, Florida USA</option>
-                <option value="Terreno 942 m2, Florida USA">Terreno 942 m2, Florida USA</option>
-                <option value="Terreno 932 m2, Florida USA">Terreno 932 m2, Florida USA</option>
-                <option value="Terreno 929 m2, Florida USA">Terreno 929 m2, Florida USA</option>
-                <option value="Terreno 935 m2, Florida USA">Terreno 935 m2, Florida USA</option>
-                <option value="Terreno 924 m2, Florida USA">Terreno 924 m2, Florida USA</option>
-                
-                
+                <option value="Conquistadores, Puente Alto">Conquistadores, Puente Alto</option>
+                <option value="Townhouse Terralta, Las Condes">Townhouse Terralta, Las Condes</option>
+                <option value="Terralta, Colina">Terralta, Colina</option>
+                <option value="Santuario del Valle, Las Dehesa">Santuario del Valle, Las Dehesa</option>
+                <option value="Las Brisas, Chicureo">Las Brisas, Chicureo</option>
+                <option value="Townhouse Flandes, Las Condes">Townhouse Flandes, Las Condes</option>
+                <option value="Los Nogales, La Dehesa">Los Nogales, La Dehesa</option>
+                <option value="Punta Kai, Punta Sur Playa Pupuya S/N, Matanza">Punta Kai, Punta Sur Playa Pupuya S/N, Matanza</option>
+
+              
                 <!-- Podemos elegir Edificios, Proyecto, Inmobiliarias, etc.según la necesidad del momento -->
             </select>
           <br>
