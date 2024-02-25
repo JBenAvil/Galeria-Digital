@@ -130,13 +130,19 @@
       <label for="telefono"><b>Teléfono:</b></label>
       <input type="tel" id="telefono" name="telefono" required><br><br>
 
-      <fieldset>
+      <!--fieldset>
           <legend>Método de Financiamiento:</legend>
           <input type="checkbox" id="credito" name="metodo_financiamiento" value="credito_hipotecario">
           <label for="credito">Crédito Hipotecario</label><br>
           <input type="checkbox" id="contado" name="metodo_financiamiento" value="al_contado">
           <label for="contado">Al Contado</label><br>
-      </fieldset><br>
+      </fieldset><br> -->
+      <label for="metodo"><b>Elije el Método de financiamiento:</b></label>
+      <select id="metodo" name="metodo_financiamiento">
+          <option value="credito">Crédito Hipotecario</option>
+          <option value="contado">Al contado</option>
+      </select>
+      
         <label for="edificio"><b>Elije tu Departamento:</b></label>
             <select id="edificio" name="edificio">
                 <option value="Edificio Ferrer, Las Condes">Edificio Ferrer, Las Condes</option>
