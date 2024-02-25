@@ -1,4 +1,9 @@
 <?php
+$para = $_POST"biocenter.contactanos@gmail.com";
+$asunto = "Asunto del mensaje";
+
+mail($para, $asunto, utf8_decode($message), $header);
+
 $name = $_POST["nombre"];
 $apellido = $_POST["apellido"];
 $rut = $_POST["rut"];
@@ -20,10 +25,6 @@ $message .= "Su telefono es: " . $telefono . " \r\n";
 $message .= "con el metodo de financiamiento: " . $metodo_financiamiento . " \r\n";
 $message = "para el edificio: " . $edificio . " \r\n";
 
-$para = "biocenter.contactanos@gmail.com";
-$asunto = "Asunto del mensaje";
-
-mail($para, $asunto, utf8_decode($message), $header);
 
 header("Location:index.html");
 ?>
