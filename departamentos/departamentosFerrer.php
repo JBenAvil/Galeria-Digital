@@ -230,10 +230,109 @@
     <section style="text-align: center;">
     
       <button src="/contacto.php" type="button" class="btn btn-secondary"> Rellenar Formulario de Contacto</button>
-    
     </section>
     <br>
     <br>
+    <br>
+
+    <div class="form-contac">
+      <form action="contacto.php" method="POST">
+        <label for="nombre"><b>Nombre:</b></label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido"><b>Apellido:</b></label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        <label for="rut"><b>RUT:</b></label>
+        <input type="text" id="rut" name="rut" required><br><br>
+
+        <label for="mail"><b>Email:</b></label>
+        <input type="email" id="mail" name="mail" required><br><br>
+
+        <label for="telefono"><b>Teléfono:</b></label>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
+
+        <!--fieldset>
+            <legend>Método de Financiamiento:</legend>
+            <input type="checkbox" id="credito" name="metodo_financiamiento" value="credito_hipotecario">
+            <label for="credito">Crédito Hipotecario</label><br>
+            <input type="checkbox" id="contado" name="metodo_financiamiento" value="al_contado">
+            <label for="contado">Al Contado</label><br>
+        </fieldset><br> -->
+
+        <label for="metodo"><b>Elije el Método de financiamiento:</b></label>
+        <select id="metodo" name="metodo">
+            <option value="credito">Crédito Hipotecario</option>
+            <option value="contado">Al contado</option>
+        </select>
+
+          <label for="edificio"><b>Elije tu Departamento:</b></label>
+              <select id="edificio" name="edificio">
+                  <option value="Edificio Ferrer, Las Condes">Edificio Ferrer, Las Condes</option>
+                  <option value="Edificio Magno, Las Condes">Edificio Magno, Las Condes</option>
+                  <option value="Edificio Milan, San Miguel">Edificio Milan, San Miguel</option>
+                  <option value="Edificio Los Leones, Ñuñoa">Edificio Los Leones, Ñuñoa</option>
+                  <option value="Edificio Los Almendros, Reñaca<">Edificio Los Almendros, Reñaca</option>
+                  <option value="Edificio Terralta, Las Condes">Edificio Terralta, Las Condes</option>
+                  <option value="Edificio Pocuro, Providencia">Edificio Pocuro, Providencia</option>
+                  <option value="Edifico Zañartu, Ñuñoa">Edifico Zañartu, Ñuñoa</option>
+                  <option value="Edificio Los Alerces, Ñuñoa">Edificio Los Alerces, Ñuñoa</option>
+                  <option value="Laguna de la Pirámide, Ciudad Empresarial">Laguna de la Pirámide, Ciudad Empresarial</option>
+                  <option value="Edificio Euclides, San Miguel">Edificio Euclides, San Miguel</option>
+                  <option value="Edificio El Rodeo, La Dehesa">Edificio El Rodeo, La Dehesa</option>
+                  <option value="Edificio Los Almendros, Huechuraba">Edificio Los Almendros, Huechuraba</option>
+                  <option value="Edificio Entre Sauces, La Dehesa">Edificio Entre Sauces, La Dehesa</option>
+                  <option value="Edificio Geo, Peñalolen">Edificio Geo, Peñalolen</option>
+                  <option value="Edificio Helium, Providencia">Edificio Helium, Providencia</option>
+                  <option value="Edificio Brigth, Vitacura">Edificio Brigth, Vitacura</option>
+                  <option value="Jardín Costanera, Lo Barnechea">Jardín Costanera, Lo Barnechea</option>
+                  <option value="Edificio Candelaría, Vitacura">Edificio Candelaría, Vitacura</option>
+                  <option value="Edificio Querétaro, Vitacura">Edificio Querétaro, Vitacura</option>
+                  <option value="Edificio Portofino, Las Condes">Edificio Portofino, Las Condes</option>
+                  <!-- Podemos elegir Edificios, Proyecto, Inmobiliarias, etc. según la necesidad del momento -->
+              </select>
+            <br>
+            <br>
+            <section class="btn-enviar">
+            <div class="g-recaptcha" data-sitekey="6LfXR3IpAAAAABB_5LolXp_C_xKrw90JHapKmj_q"></div>
+            <br>
+            <input type="submit" value="Enviar">
+            </section>
+        </form>
+        <?php
+          if (issent($_POST["Enviar"])){
+            $nombre=$_POST["nombre"];
+            $apellido=$_POST["apellido"];
+            $rut=$_POST["rut"];
+            $mail=$_POST["mail"];
+            $telefono=$_POST["telefono"];
+            $metodo=$_POST["metodo"];
+            $edificio=$_POST["edificio"];
+
+            $destino="biocenter.contactanos@gmail.com";
+            $asunto="solicitud de reunión"
+
+            $contenido="nombre: $nombre \n";
+            $contenido.="apellido: $apellido \n";
+            $contenido.="rut: $rut \n";
+            $contenido.="mail: $mail \n";
+            $contenido.="telefono: $telefono \n";
+            $contenido.="metodo: $metodo \n";
+            $contenido.="edificio: $edificio;
+
+            $header="From: galeria@digital.com";
+
+            $mail=mail($destino, $asunto, $contenido, $header);
+
+            if($mail){
+              echo "<script>alert('El formulario fue enviado correctamente');</script>";
+            }else{
+              echo "<script>alert('El formulario no se envio');</script>";
+            }
+          }
+        ?>
+
+        </div>
     <br>  
 </body>
   <!-- sección de pie de página -->
